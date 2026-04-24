@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "timestamp": "2026-04-24T08:16:52.991870",
+    "event": "Học cách dùng docker-compose, bài học là dùng docker service name để kết nối.",
+    "tags": [
+      "docker-compose",
+      "kết nối dịch vụ",
+      "bài học"
+    ]
+  },
+  {
+    "timestamp": "2026-04-24T08:21:04.680206",
+    "event": "vừa fix xong một bug lớn hệ thống",
+    "tags": [
+      "công việc",
+      "sửa lỗi",
+      "thành tựu"
+    ]
+  },
+  {
+    "timestamp": "2026-04-24T08:22:59.339415",
+    "event": "Đã đi du lịch tới New York vào năm ngoái.",
+    "tags": [
+      "du lịch",
+      "New York"
+    ]
+  },
+  {
+    "timestamp": "2026-04-24T08:23:42.451062",
+    "event": "Người dùng đã ăn mất 1 quả.",
+    "tags": []
+  },
+  {
+    "timestamp": "2026-04-24T08:24:25.599688",
+    "event": "finished studying AICB the day before yesterday",
+    "tags": [
+      "học tập",
+      "AICB",
+      "hoàn thành"
+    ]
+  }
+]
