@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "topic": "Profile recall after many turns",
+    "turns": [
+      {"query": "Chào bạn, tôi tên là Linh.", "expected_intent": "long_term"},
+      {"query": "Bạn có thể cho tôi biết thủ đô của Nhật Bản không?", "expected_intent": "semantic"},
+      {"query": "Nó có rộng không?", "expected_intent": "short_term"},
+      {"query": "Ngôn ngữ chính ở đó là gì?", "expected_intent": "short_term"},
+      {"query": "Bạn có nhớ tôi tên là gì không?", "expected_intent": "long_term"}
+    ]
+  },
+  {
+    "id": 2,
+    "topic": "Allergy conflict update",
+    "turns": [
+      {"query": "Ghi nhớ giúp tôi là tôi bị dị ứng sữa bò nhé.", "expected_intent": "long_term"},
+      {"query": "Vậy tôi có thể uống trà sữa làm từ sữa bò không?", "expected_intent": "short_term"},
+      {"query": "À nhầm, tôi bị dị ứng đậu nành chứ không phải sữa bò.", "expected_intent": "long_term"},
+      {"query": "Đậu nành thường có trong món gì?", "expected_intent": "semantic"},
+      {"query": "Tôi dị ứng gì bạn nhớ không?", "expected_intent": "long_term"}
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "Recall previous debug lesson (Episodic)",
+    "turns": [
+      {"query": "Hôm qua tôi học cách dùng docker-compose, nhớ lưu lại bài học này giúp tôi là dùng docker service name để kết nối.", "expected_intent": "episodic"},
+      {"query": "Docker dùng để làm gì?", "expected_intent": "semantic"},
+      {"query": "Container là gì?", "expected_intent": "semantic"},
+      {"query": "Bạn có nhớ tôi học được kinh nghiệm gì về docker không?", "expected_intent": "episodic"},
+      {"query": "Tôi có nên áp dụng nó cho dự án web không?", "expected_intent": "short_term"}
+    ]
+  },
+  {
+    "id": 4,
+    "topic": "Retrieve FAQ chunk (Semantic)",
+    "turns": [
+      {"query": "Chính sách hoàn tiền của VinUniversity là gì?", "expected_intent": "semantic"},
+      {"query": "Thế còn học bổng thì sao?", "expected_intent": "semantic"},
+      {"query": "Tôi muốn hỏi lại về hoàn tiền, điều kiện là gì?", "expected_intent": "semantic"}
+    ]
+  },
+  {
+    "id": 5,
+    "topic": "Trim/token budget test",
+    "turns": [
+      {"query": "Kể cho tôi một câu chuyện thật dài về một hành tinh xa xôi với rất nhiều chi tiết lặp lại để kiểm tra giới hạn bộ nhớ của bạn. Hãy nói càng dài càng tốt.", "expected_intent": "semantic"},
+      {"query": "Tiếp tục kể chi tiết hơn nữa về cư dân ở đó.", "expected_intent": "short_term"},
+      {"query": "Tiếp tục kể về hệ sinh thái của hành tinh đó.", "expected_intent": "short_term"},
+      {"query": "Tóm tắt câu chuyện lại trong 1 câu.", "expected_intent": "short_term"}
+    ]
+  },
+  {
+    "id": 6,
+    "topic": "Mixed Intent & Identity",
+    "turns": [
+      {"query": "Tôi làm nghề kỹ sư phần mềm.", "expected_intent": "long_term"},
+      {"query": "Bạn lưu lại chuyện hôm nay tôi vừa fix xong một bug lớn hệ thống nhé.", "expected_intent": "episodic"},
+      {"query": "Công việc hiện tại của tôi là gì?", "expected_intent": "long_term"},
+      {"query": "Sự kiện đáng nhớ tôi vừa kể là gì?", "expected_intent": "episodic"},
+      {"query": "Bạn giải thích khái niệm Microservices giúp tôi.", "expected_intent": "semantic"}
+    ]
+  },
+  {
+    "id": 7,
+    "topic": "Preference Conflict",
+    "turns": [
+      {"query": "Màu yêu thích của tôi là màu Đỏ.", "expected_intent": "long_term"},
+      {"query": "Nhắc lại màu yêu thích của tôi?", "expected_intent": "long_term"},
+      {"query": "Tôi đổi ý rồi, giờ tôi thích màu Xanh dương hơn.", "expected_intent": "long_term"},
+      {"query": "Bây giờ tôi thích màu gì?", "expected_intent": "long_term"}
+    ]
+  },
+  {
+    "id": 8,
+    "topic": "Episodic vs Semantic clarity",
+    "turns": [
+      {"query": "Thủ đô của nước Mỹ là gì?", "expected_intent": "semantic"},
+      {"query": "Năm ngoái tôi đã đi du lịch tới New York, hãy ghi lại chuyện đó.", "expected_intent": "episodic"},
+      {"query": "Nơi tôi đã đến du lịch năm ngoái có phải là thủ đô không?", "expected_intent": "short_term"},
+      {"query": "New York có diện tích bao nhiêu?", "expected_intent": "semantic"}
+    ]
+  },
+  {
+    "id": 9,
+    "topic": "Complex Short-term tracking",
+    "turns": [
+      {"query": "Tôi đang có 3 quả táo.", "expected_intent": "short_term"},
+      {"query": "Tôi ăn mất 1 quả.", "expected_intent": "short_term"},
+      {"query": "Tôi mua thêm 5 quả nữa.", "expected_intent": "short_term"},
+      {"query": "Hiện tại tôi có bao nhiêu quả táo?", "expected_intent": "short_term"}
+    ]
+  },
+  {
+    "id": 10,
+    "topic": "Final Robustness Check",
+    "turns": [
+      {"query": "Tôi là học sinh VinUni.", "expected_intent": "long_term"},
+      {"query": "Chủ tịch tập đoàn Vingroup là ai?", "expected_intent": "semantic"},
+      {"query": "Hôm kia tôi đã học xong môn AICB, nhớ nhé.", "expected_intent": "episodic"},
+      {"query": "Tôi học trường nào?", "expected_intent": "long_term"},
+      {"query": "Môn học gần nhất tôi hoàn thành là gì?", "expected_intent": "episodic"}
+    ]
+  }
+]
